@@ -911,11 +911,7 @@
             'min-height': minHeight + headerHeight + searchHeight + actionsHeight + doneButtonHeight + 'px'
           });
           $menuInner.css({
-<<<<<<< HEAD
-            'max-height': menuHeight - headerHeight - searchHeight - actionsHeight - doneButtonHeight - menuPadding - 70 + 'px',
-=======
-            'max-height': menuHeight - headerHeight - searchHeight - actionsHeight - doneButtonHeight - menuPadding.vert + 'px',
->>>>>>> remotes/silviomoreto/master
+            'max-height': menuHeight - headerHeight - searchHeight - actionsHeight - doneButtonHeight - menuPadding.vert - 70 + 'px',
             'overflow-y': 'auto',
             'min-height': Math.max(minHeight - menuPadding.vert, 0) + 'px'
           });
