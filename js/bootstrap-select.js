@@ -918,7 +918,7 @@
         };
         getSize();
         this.$searchbox.off('input.getSize propertychange.getSize').on('input.getSize propertychange.getSize', getSize);
-        $window.off('resize.getSize scroll.getSize').on('resize.getSize scroll.getSize', getSize);
+        $window.off('resize.getSize scroll.getSize').on('resize.getSize', getSize);
       } else if (this.options.size && this.options.size != 'auto' && this.$lis.not(notDisabled).length > this.options.size) {
         var optIndex = this.$lis.not('.divider').not(notDisabled).children().slice(0, this.options.size).last().parent().index(),
             divLength = this.$lis.slice(0, optIndex + 1).filter('.divider').length;
