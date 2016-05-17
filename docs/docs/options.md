@@ -86,11 +86,27 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
     </td>
   </tr>
   <tr>
+    <td>liveSearchNormalize</td>
+    <td>boolean</td>
+    <td><code>false</code></td>
+    <td>
+      <p>Setting liveSearchNormalize to <code>true</code> allows for accent-insensitive searching.</p>
+    </td>
+  </tr>
+  <tr>
     <td>liveSearchPlaceholder</td>
     <td>string</td>
     <td><code>null</code></td>
     <td>
       <p>When set to a string, a placeholder attribute equal to the string will be added to the liveSearch input.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>liveSearchStyle</td>
+    <td>string</td>
+    <td><code>'contains'</code></td>
+    <td>
+      <p>When set to <code>'contains'</code>, searching will reveal options that contain the searched text. For example, searching for pl with return both Ap<b>pl</b>e, <b>Pl</b>um, and <b>Pl</b>antain. When set to <code>'startsWith'</code>, searching for pl will return only <b>Pl</b>um and <b>Pl</b>antain.</p>
     </td>
   </tr>
   <tr>
@@ -101,6 +117,15 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
       <p>When set to an integer and in a multi-select, the number of selected options cannot exceed the given value.</p>
       <p>This option can also exist as a data-attribute for an <code>&lt;optgroup&gt;</code>, in which case it only 
       applies to that <code>&lt;optgroup&gt;</code>.</p>
+    </td>
+  </tr>
+  <tr>
+    <td>maxOptionsText</td>
+    <td>string | array | function</td>
+    <td><code>function</code></td>
+    <td>
+      <p>The text that is displayed when maxOptions is enabled and the maximum number of options for the given scenario have been selected.</p>
+      <p>If a function is used, it must return an array. array[0] is the text used when maxOptions is applied to the entire select element. array[1] is the text used when maxOptions is used on an optgroup. If a string is used, the same text is used for both the element and the optgroup.</p>
     </td>
   </tr>
   <tr>
